@@ -1,0 +1,11 @@
+docker-build-publish
+docker-workflow
+github-branch-source
+swarm
+blueocean
+greenballs
+pipeline-utility-steps
+basic-branch-build-strategies
+thinBackup
+embeddable-build-status
+kubernetes-cd
