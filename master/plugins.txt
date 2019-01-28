@@ -8,4 +8,3 @@ pipeline-utility-steps
 basic-branch-build-strategies
 thinBackup
 embeddable-build-status
-kubernetes-cd
