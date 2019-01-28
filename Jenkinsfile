@@ -14,7 +14,7 @@ pipeline {
             steps {
                 sh "docker tag master rfkikt/jenkins-master:${BUILD_NUMBER}"
                 sh "docker tag slave  rfkikt/jenkins-slave:${BUILD_NUMBER}"
-                withDockerRegistry([credentialsId: 'rfkikt']) {
+                withDockerRegistry([credentialsId: 'rfkikt', url: '']) {
                     sh "docker push rfkikt/jenkins-master:${BUILD_NUMBER}"
                     sh "docker push rfkikt/jenkins-slave:${BUILD_NUMBER}"
                 }
