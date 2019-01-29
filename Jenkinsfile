@@ -12,11 +12,11 @@ pipeline {
                 branch 'master'
             }
             steps {
-                sh "docker tag master rfkikt/jenkins-master:${BUILD_NUMBER}"
-                sh "docker tag slave  rfkikt/jenkins-slave:${BUILD_NUMBER}"
+                sh "docker tag master rogfk/jenkins-master:${BUILD_NUMBER}"
+                sh "docker tag slave  rogfk/jenkins-slave:${BUILD_NUMBER}"
                 withDockerRegistry([credentialsId: 'rfkikt', url: '']) {
-                    sh "docker push rfkikt/jenkins-master:${BUILD_NUMBER}"
-                    sh "docker push rfkikt/jenkins-slave:${BUILD_NUMBER}"
+                    sh "docker push rogfk/jenkins-master:${BUILD_NUMBER}"
+                    sh "docker push rogfk/jenkins-slave:${BUILD_NUMBER}"
                 }
             }
         }
